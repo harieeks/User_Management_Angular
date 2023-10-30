@@ -1,0 +1,25 @@
+<h2>hey..{{user.firstname}}</h2>
+<div class="right-end">
+    <button (click)="logout()" mat-raised-button color="primary">Logout</button>
+</div>
+<div class="centered-card">
+    <mat-card >
+        <mat-card-content>
+            <div >
+                <img [src]="
+                apiurl" alt="">
+            </div>
+            
+            <div class="div-50">
+            <p><strong>Name: </strong>{{user.firstname}}</p>
+            <p><strong>email: </strong>{{user.email}}</p>
+            <p><strong>Image: </strong>{{user.image}}</p>
+            </div>
+            <div>
+                <input type="file" (change)="onChange($event)">
+                <button (click)="uploadUserImage()">Upload</button>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>
+
